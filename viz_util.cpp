@@ -29,7 +29,7 @@ attribute vec3 a_color;
 varying vec3 v_color;
 void main() {
     gl_Position = gl_ModelViewProjectionMatrix * vec4(a_position, 1.0);
-    v_color = a_color;
+    v_color = gl_Color.rgb;
 }
 @start fragment
 #version 120
