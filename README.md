@@ -18,13 +18,14 @@ This project provides a robust, low-latency visualization pipeline designed for 
 
 Plaintext
 
-`.
+```
+.
 ├── CMakeLists.txt        # Build configuration for C++
 ├── viz_util.cpp          # C++ Standalone Visualizer (Consumer)
 ├── shm_sender.py         # Python SHM Utility & Simulator (Producer)
 ├── build/                # Compiled binaries
 └── README.md             # You are here`
-
+```
 ---
 
 ## 🛠️ Requirements & Environment
@@ -68,11 +69,11 @@ This tells the GPU to read 3 floats for position, skip the next 3 (color) to fin
 ### 1. Build the C++ Visualizer
 
 Bash
-
+```
 `mkdir build && cd build
 cmake ..
 make -j$(nproc)`
-
+```
 ### 2. Run the System
 
 **Important:** Start the Python script first to initialize the shared memory segment.
@@ -80,15 +81,15 @@ make -j$(nproc)`
 **Terminal 1 (Python):**
 
 Bash
-
+```
 `python3 shm_sender.py`
-
+```
 **Terminal 2 (C++):**
 
 Bash
-
+```
 `./build/viz_util`
-
+```
 ---
 
 ## ⚠️ Troubleshooting
@@ -98,7 +99,7 @@ Bash
 - **Memory Overflow:** If sending $> 500k$ points, increase `size_mb` in the `SHMSender` constructor.
 - **Resetting the Bridge:** If the memory becomes corrupted due to a hard crash, clear it manually:Bash
     
-    `rm /dev/shm/slam_buffer`
+    ```rm /dev/shm/slam_buffer```
     
 
 ---
