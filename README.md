@@ -91,7 +91,9 @@ Bash
 `./build/viz_util`
 ```
 ---
-
+## Demo
+![SLAM Visualization Demo](demo.gif)
+---
 ## ⚠️ Troubleshooting
 
 - **Permission Denied:** Ensure you have write access to `/dev/shm`.
