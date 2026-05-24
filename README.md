@@ -86,7 +86,7 @@ make -j$(nproc)`
 
 Bash
 ```
-`python3 shm_sender.py`
+`python3 pcd.py`
 ```
 **Terminal 2 (C++):**
 
