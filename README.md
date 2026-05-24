@@ -4,6 +4,10 @@
 
 This project provides a robust, low-latency visualization pipeline designed for robotics and SLAM research (UAVs, AUVs, and Warehouse Automation). It allows a Python "Producer" (your SLAM node) to stream massive 3D datasets to a standalone C++ "Consumer" (Pangolin Visualizer) using **Shared Memory (SHM)**.
 
+---
+## Visual Demo
+![Visual Inertial Odometry Tracking](slam_VIO.gif)
+
 ## 🚀 Key Features
 
 - **Zero-Copy Communication:** Bypasses the network stack using `/dev/shm` for near-instantaneous data transfer.
